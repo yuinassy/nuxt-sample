@@ -24,7 +24,7 @@
       <br>
       
       <div class="center">
-        <move-square image="seihoukei"></move-square>
+        <square-modal image="seihoukei"></square-modal>
         <br>
 
         <square sharp="seihoukei"
@@ -78,11 +78,11 @@
   </div>
 </template>
 <script>
-import MoveSquare from './MoveSquare.vue';
+import SquareModal from './SquareModal.vue';
 import Square from './Square.vue';
 
         export default {
-  components: { Square, MoveSquare },
+  components: { Square, SquareModal },
           data () {
             return {
               isActive: true,
