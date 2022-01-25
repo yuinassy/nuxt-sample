@@ -17,6 +17,39 @@
           To get started, remove <code class="bg-gray-100 text-sm p-1 rounded border">components/Tutorial.vue</code> and start coding in <code class="bg-gray-100 text-sm p-1 rounded border">pages/index.vue</code>. Have fun!
         </p>
       </div>
+     
+      <div class="page"></div>
+      <navbar></navbar>
+ 
+      <br>
+      
+      <div class="center">
+        <move-square image="seihoukei"></move-square>
+        <br>
+
+        <square sharp="seihoukei"
+          primary="black"
+          secondary="green"></square>
+        
+        <br>
+        <square sharp="maru"
+          primary="pink"
+          secondary="orange"
+
+          ></square>
+        <br>
+        <div class="seihoukei"
+          :class="{red: isActive, blue: hasError}"
+          @click="changeColor">
+        </div>
+        <br>
+
+        <div class="maru"
+          :class="{red: isActive, blue: hasError}"
+          @click="maruColor">
+        </div>
+      </div>
+          
       <div class="flex justify-center pt-4 space-x-2">
         <a href="https://github.com/nuxt/nuxt.js" target="_blank"><svg
           class="w-6 h-6 text-gray-600 hover:text-gray-800"
@@ -44,3 +77,60 @@
     </div>
   </div>
 </template>
+<script>
+import MoveSquare from './MoveSquare.vue';
+import Square from './Square.vue';
+
+        export default {
+  components: { Square, MoveSquare },
+          data () {
+            return {
+              isActive: true,
+              hasError: false,
+             
+            }
+          },
+          methods:{
+            changeColor(){ 
+              this.isActive = !this.isActive;
+              this.hasError = !this.hasError;
+              
+            },
+            maruColor(){ 
+              this.isActive = !this.isActive;
+              this.hasError = !this.hasError;
+              
+            },
+          },
+        }
+
+</script>
+
+<style>
+.seihoukei{
+  width: 100px;
+  height:100px;
+
+
+}
+.red {
+  background: red;
+}
+.blue{
+  background: green;
+}
+
+.maru{
+  width: 100px;
+  height:100px;
+  border-radius: 50%;
+
+}
+
+.center{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+</style>
