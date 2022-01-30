@@ -25,8 +25,22 @@
       
       <div class="center">
         <square-modal image="seihoukei"></square-modal>
+      </div>
+      <br>
+      <div class="yokoretsu">
         <br>
+        <carousel></carousel>
+        <carousel></carousel>
+        <carousel></carousel>
+      </div>
+      <br>
+      <div class="yokoretsu">
+        <carousel-fade-in></carousel-fade-in>
+        <carousel-fade-in></carousel-fade-in>
+        <carousel-fade-in></carousel-fade-in>
+      </div>
 
+      <div class="center">
         <square sharp="seihoukei"
           primary="black"
           secondary="green"></square>
@@ -80,10 +94,13 @@
 <script>
 import SquareModal from './SquareModal.vue';
 import Square from './Square.vue';
+import Carousel from './Carousel.vue';
+import CarouselFadeIn from './CarouselFadeIn.vue';
 
         export default {
-  components: { Square, SquareModal },
-          data () {
+  components: { Square, SquareModal, Carousel, CarouselFadeIn },
+          
+    data () {
             return {
               isActive: true,
               hasError: false,
@@ -131,6 +148,11 @@ import Square from './Square.vue';
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.yokoretsu{
+  display: flex;
+  justify-content: center;
 }
 
 </style>
