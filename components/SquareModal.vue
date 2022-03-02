@@ -16,11 +16,11 @@
           <!-- aaa -->
 
           
-          <b-modal ref="my-modal" size="lg" hide-footer title="Using Component Methods">
+          <b-modal ref="my-modal" size="lg"  hide-footer title="Using Component Methods">
               <div class="d-block text-center" >
                   <h3>料理名</h3>
                   <h5>料理の説明</h5>
-                  
+
               </div>
               <b-button class="mt-3" variant="warning" block><i class="fas fa-star"></i>お気に入り</b-button>
               <b-button class="mt-2" block @click="hideModal">閉じる</b-button>

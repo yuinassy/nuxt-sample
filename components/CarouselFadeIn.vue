@@ -5,6 +5,7 @@
       v-model="slide"
       :interval="4000"
       fade
+      no-hover-pause
       indicators 
       background="#ababab"
       img-width="1024"
@@ -21,7 +22,7 @@
       <b-carousel-slide
         caption="First slide"
         text="Nulla vitae elit libero, a pharetra augue mollis interdum."
-        img-src="https://picsum.photos/1024/480/?image=52">
+        img-src="/img/iOS の画像 (2).jpg">
         </b-carousel-slide>
 
       <!-- Slides with custom text -->
@@ -34,17 +35,7 @@
 
       <!-- Slides with img slot -->
       <!-- Note the classes .d-block and .img-fluid to prevent browser default image alignment -->
-      <b-carousel-slide>
-        <template #img>
-          <img
-            class="d-block img-fluid w-100"
-            width="1024"
-            height="480"
-            src="https://picsum.photos/1024/480/?image=55"
-            alt="image slot"
-          >
-        </template>
-      </b-carousel-slide>
+    
 
       <!-- Slide with blank fluid image to maintain slide aspect ratio -->
       <b-carousel-slide caption="Blank Image" img-blank img-alt="Blank image">
